@@ -2,7 +2,7 @@ import React from 'react';
 
 
 const Forecast = (props) => (
-    <div>
+    <div class="forecast">
         {props.forecast_city && <p>Location: {props.forecast_city}</p>}
         {/* today (0) */}
         {props.forecast && <p>Temperature: {props.forecast} &#8457;</p>}

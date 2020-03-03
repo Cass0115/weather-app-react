@@ -92,6 +92,7 @@ class App extends React.Component {
 
           <Form getForecast={this.getForecast}/>   
 
+
           {/* <Weather
             temperature={this.state.temperature}
             humitidy={this.state.humidity}
