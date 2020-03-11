@@ -2,7 +2,7 @@ import React from 'react';
 import './App.css';
 import Titles from "./components/Titles";
 import Form from "./components/Form";
-// import Weather from "./components/Weather";
+import Weather from "./components/Weather";
 import Forecast from "./components/Forecast";
 // import * as reactRouter from "react-router";
 
@@ -23,29 +23,51 @@ class App extends React.Component {
   }
 
 
-  getWeather = async (e) => {
+
+componentDidMount() {
     const cityID = "6173331,1850144,2643743,5809844";
-    const data = await fetch(`http://api.openweathermap.org/data/2.5/group?id=${cityID}&appid=${API_KEY}&units=imperial`)
-    .then(api_call_onload => api_call_onload.json());
-    console.log(data);
-      if(cityID) {
-        this.setState({
-          isLoaded: true,
-          temperature: data.main.temp,
-          city: data.name,
-          description: data.weather[0].description,
-          error: ""
-        });
-      } else {
-        this.setState({
+    const data = fetch(`http://api.openweathermap.org/data/2.5/group?id=${cityID}&appid=${API_KEY}&units=imperial`)
+      .then((response) => response.json())
+      .then((object) => {
+        
+        console.log(object.list);
+        console.log(object.list[1].name);
+        console.log(object.list[1].main.temp);
+
+        console.log(object.list[2].name);
+        console.log(object.list[2].main.temp);
+
+        console.log(object.list[3].name);
+        console.log(object.list[3].main.temp);
+        if(object) {
+          return this.setState({
             isLoaded: true,
-            temperature: undefined,
-            city: undefined,
-            description: undefined,
-            error: "Please enter a city"
-        });
-      }
-  }
+            // city: object.list[0].main.temp,
+            temperature: Math.round(object.list[0].main.temp),
+            description: object.list[0].weather[0].main,
+
+
+            // city1: object.list[1].main.temp,
+            temperature1: Math.round(object.list[1].main.temp),
+            description1: object.list[1].weather[0].main,
+
+            temperature2: Math.round(object.list[2].main.temp),
+            description2: object.list[2].weather[0].main,
+
+            temperature3: Math.round(object.list[3].main.temp),
+            description3: object.list[3].weather[0].main,
+          })
+        } else {
+          this.setState({
+             isLoaded: true,
+             temperature: undefined,
+             city: undefined,
+             description: undefined,
+             error: "Oppps something went wrong"
+            });
+          }
+      })
+}
 
   getForecast = async (e) => {
     e.preventDefault();
@@ -80,7 +102,7 @@ class App extends React.Component {
     })
   }
 }
-  
+
   
   render() { 
     return (
@@ -93,14 +115,29 @@ class App extends React.Component {
           <Form getForecast={this.getForecast}/>   
 
 
-          {/* <Weather
+          <Weather
             temperature={this.state.temperature}
             humitidy={this.state.humidity}
             city={this.state.city}
             country={this.state.country}
             description={this.state.description}
+            
+            temperature1={this.state.temperature1}
+            description1={this.state.description1}
+
+            temperature2={this.state.temperature2}
+            description2={this.state.description2}
+
+            temperature3={this.state.temperature3}
+            description3={this.state.description3}
+
+            temperature4={this.state.temperature4}
+            description4={this.state.description4}
+            
             error={this.state.error}
-          /> */}
+
+
+          />
           
           <Forecast 
 
