@@ -1,9 +1,12 @@
 import React from 'react';
 import './App.css';
+import './Weather.css';
+import './Forecast.css';
 import Titles from "./components/Titles";
 import Form from "./components/Form";
 import Weather from "./components/Weather";
 import Forecast from "./components/Forecast";
+
 // import * as reactRouter from "react-router";
 
 
@@ -25,37 +28,58 @@ class App extends React.Component {
 
 
 componentDidMount() {
-    const cityID = "6173331,1850144,2643743,5809844";
-    const data = fetch(`http://api.openweathermap.org/data/2.5/group?id=${cityID}&appid=${API_KEY}&units=imperial`)
+    const cityID = "5344994,5106292,2643743,1850144";
+    fetch(`http://api.openweathermap.org/data/2.5/group?id=${cityID}&appid=${API_KEY}&units=imperial`)
       .then((response) => response.json())
-      .then((object) => {
-        
+      .then((object) => { 
         console.log(object.list);
-        console.log(object.list[1].name);
-        console.log(object.list[1].main.temp);
 
-        console.log(object.list[2].name);
-        console.log(object.list[2].main.temp);
+        // console.log(object.list[0].weather[0].main)
+        // console.log(object.list[0].main.temp_min);
+        // console.log(object.list[0].main.temp_max);
+        // console.log(object.list[0].clouds.all);
 
-        console.log(object.list[3].name);
-        console.log(object.list[3].main.temp);
+        // console.log(object.list[1].name);
+        // console.log(object.list[1].main.temp);
+        
+
+        // console.log(object.list[2].name);
+        // console.log(object.list[2].main.temp);
+
+        // console.log(object.list[3].name);
+        // console.log(object.list[3].main.temp);
+
         if(object) {
           return this.setState({
             isLoaded: true,
-            // city: object.list[0].main.temp,
+            
             temperature: Math.round(object.list[0].main.temp),
             description: object.list[0].weather[0].main,
+            minimum: Math.round(object.list[0].main.temp_min),
+            maximum: Math.round(object.list[0].main.temp_max),
+            cloud: object.list[0].clouds.all,
+            humidity: object.list[0].main.humidity,
 
-
-            // city1: object.list[1].main.temp,
             temperature1: Math.round(object.list[1].main.temp),
             description1: object.list[1].weather[0].main,
+            minimum1: Math.round(object.list[1].main.temp_min),
+            maximum1: Math.round(object.list[1].main.temp_max),
+            cloud1: object.list[1].clouds.all,
+            humidity1: object.list[1].main.humidity,
 
             temperature2: Math.round(object.list[2].main.temp),
             description2: object.list[2].weather[0].main,
+            minimum2: Math.round(object.list[2].main.temp_min),
+            maximum2: Math.round(object.list[2].main.temp_max),
+            cloud2: object.list[2].clouds.all,
+            humidity2: object.list[2].main.humidity,
 
             temperature3: Math.round(object.list[3].main.temp),
             description3: object.list[3].weather[0].main,
+            minimum3: Math.round(object.list[3].main.temp_min),
+            maximum3: Math.round(object.list[3].main.temp_max),
+            cloud3: object.list[3].clouds.all,
+            humidity3: object.list[3].main.humidity,
           })
         } else {
           this.setState({
@@ -92,7 +116,6 @@ componentDidMount() {
         forecast_date4: forecast_data.list[39].dt_txt,
         error: ""
       })
-      console.log(this.forecast);
     } else {
       this.setState({
         forecast: undefined,
@@ -116,26 +139,39 @@ componentDidMount() {
 
 
           <Weather
-            temperature={this.state.temperature}
-            humitidy={this.state.humidity}
+            
             city={this.state.city}
             country={this.state.country}
+
+            temperature={this.state.temperature}
             description={this.state.description}
+            minimum={this.state.minimum}
+            maximum={this.state.maximum}
+            cloud={this.state.cloud}
+            humidity={this.state.humidity}
             
             temperature1={this.state.temperature1}
             description1={this.state.description1}
+            minimum1={this.state.minimum1}
+            maximum1={this.state.maximum1}
+            cloud1={this.state.cloud1}
+            humidity1={this.state.humidity1}
 
             temperature2={this.state.temperature2}
             description2={this.state.description2}
+            minimum2={this.state.minimum2}
+            maximum2={this.state.maximum2}
+            cloud2={this.state.cloud2}
+            humidity2={this.state.humidity2}
 
             temperature3={this.state.temperature3}
             description3={this.state.description3}
-
-            temperature4={this.state.temperature4}
-            description4={this.state.description4}
+            minimum3={this.state.minimum3}
+            maximum3={this.state.maximum3}
+            cloud3={this.state.cloud3}
+            humidity3={this.state.humidity3}
             
             error={this.state.error}
-
 
           />
           
@@ -161,6 +197,26 @@ componentDidMount() {
         </div>
     
     );
+  }
+}
+
+// function addClass(){
+//   var toggleWeather = document.querySelector('weather');
+//   toggleWeather.classList.add('remove');
+// };
+
+class AddingClass extends React.Component {
+  handleClick() {
+    // var toggleWeather = document.querySelector('weather');
+    // toggleWeather.classList.add('remove');
+    console.log('this is:', this);
+  }
+  render() {
+    return (
+      <button onClick={() => this.handleClick()}>
+      Click Me
+      </button>
+    )
   }
 }
 

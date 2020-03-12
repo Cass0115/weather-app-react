@@ -1,20 +1,18 @@
-.App {
-  text-align: center;
+body {
+  background-color: #000;
+  color: #fff;
+}
+.title__wrapper {
+  display: flex;
+  justify-content: space-evenly;
+}
+.remove {
+  display: none;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-.forecast {
-  padding: 1rem;
-}
 
-.weather {
-  background-color: aquamarine;
-  height: 200px;
-  width: 100%;
-}
+
+
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {

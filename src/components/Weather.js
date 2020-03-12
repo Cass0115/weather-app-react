@@ -3,47 +3,107 @@ import React from 'react';
 class Weather extends React.Component {
     render() {
         return (
-            <div className="wrapper">
-                <p>Vancouver, Canada</p>
-                
-                {this.props.temperature && <p>Temperature: {this.props.temperature} &#8457;</p>}
-                <p>{this.props.description}</p>
-                {this.props.error && <p>{this.props.error}</p>}
-            
-                <p>Tokyo, Japan</p>
-                {this.props.temperature1 && <p>Temperature: {this.props.temperature1} &#8457;</p>}
-                <p>{this.props.description1}</p>
-                {this.props.error && <p>{this.props.error}</p>}
-                
-                <p>London, England</p>
-                {this.props.temperature1 && <p>Temperature: {this.props.temperature1} &#8457;</p>}
-                <p>{this.props.description1}</p>
-                {this.props.error && <p>{this.props.error}</p>}
+            <div className="weather__wrapper weather">
 
-                <p>Seattle, United States</p>
-                {this.props.temperature1 && <p>Temperature: {this.props.temperature1} &#8457;</p>}
-                <p>{this.props.description1}</p>
-                {this.props.error && <p>{this.props.error}</p>}
+                <div className="content__block">
+                    <div className="city__name">
+                        <p>Los Angeles</p>
+                    </div>
+                    <div className="weather__temp">
+                        {this.props.temperature && <p>{this.props.temperature} &#8457;</p>}
+                    </div>
+                    <div className="weather__icon">
+                        {/* <img src="">Icon of weather depending on said weather */}
+                    </div>
+                    <div className="weather__extra-info">
+                        <p>Low</p>
+                        {this.props.minimum && <p> {this.props.minimum} &#8457;</p>}
+                        <p>High</p>
+                        {this.props.maximum && <p> {this.props.maximum} &#8457;</p>}
+                        <p>Cloud coverage</p>
+                        {this.props.cloud && <p>{this.props.cloud}%</p>}
+                        <p>Humidity</p>
+                        {this.props.humidity && <p>{this.props.humidity}%</p>}
+                    </div>
+                    <p><b>------Break------</b></p>
+
+                </div>
+
+                <div className="content__block">
+                    <div className="city__name">
+                        <p>New York</p>
+                    </div>
+                    <div className="weather__temp">
+                        {this.props.temperature1 && <p>{this.props.temperature1} &#8457;</p>}
+                    </div>
+                    <div className="weather__icon">
+                        {/* <img src="">Icon of weather depending on said weather */}
+                    </div>
+                    <div className="weather__extra-info">
+                        <p>Low</p>
+                        {this.props.minimum1 && <p> {this.props.minimum1} &#8457;</p>}
+                        <p>High</p>
+                        {this.props.maximum1 && <p> {this.props.maximum1} &#8457;</p>}
+                        <p>Cloud coverage</p>
+                        {this.props.cloud1 && <p>{this.props.cloud1}%</p>}
+                        <p>Humidity</p>
+                        {this.props.humidity1 && <p>{this.props.humidity1}%</p>}
+                    </div>
+                    <p><b>------Break------</b></p>
+
+                </div>
+
+                <div className="content__block">
+                    <div className="city__name">
+                        <p>London</p>
+                    </div>
+                    <div className="weather__temp">
+                        {this.props.temperature2 && <p>{this.props.temperature2} &#8457;</p>}
+                    </div>
+                    <div className="weather__icon">
+                        {/* <img src="">Icon of weather depending on said weather */}
+                    </div>
+                    <div className="weather__extra-info">
+                        <p>Low</p>
+                        {this.props.minimum2 && <p> {this.props.minimum2} &#8457;</p>}
+                        <p>High</p>
+                        {this.props.maximum2 && <p> {this.props.maximum2} &#8457;</p>}
+                        <p>Cloud coverage</p>
+                        {this.props.cloud2 && <p>{this.props.cloud2}%</p>}
+                        <p>Humidity</p>
+                        {this.props.humidity2 && <p>{this.props.humidity2}%</p>}
+                    </div>
+                    <p><b>------Break------</b></p>
+
+                </div>
+
+                <div className="content__block">
+                    <div className="city__name">
+                        <p>Tokyo</p>
+                    </div>
+                    <div className="weather__temp">
+                        {this.props.temperature3 && <p>{this.props.temperature3} &#8457;</p>}
+                    </div>
+                    <div className="weather__icon">
+                        {/* <img src="">Icon of weather depending on said weather */}
+                    </div>
+                    <div className="weather__extra-info">
+                        <p>Low</p>
+                        {this.props.minimum3 && <p> {this.props.minimum3} &#8457;</p>}
+                        <p>High</p>
+                        {this.props.maximum3 && <p> {this.props.maximum3} &#8457;</p>}
+                        <p>Cloud coverage</p>
+                        {this.props.cloud3 && <p>{this.props.cloud3}%</p>}
+                        <p>Humidity</p>
+                        {this.props.humidity3 && <p>{this.props.humidity3}%</p>}
+                    </div>
+                    <p><b>------Break------</b></p>
+
+                </div>
             </div>
 
         )
     }
 }
-
-// const Weather = (props) => (
-//     <div className="weather">
-//         {props.city && <p>Location: {props.city}</p>}
-//         {props.temperature && <p>Temperature: {props.temperature} &#8457;</p>}
-//         <p>{props.description}</p>
-//         {props.error && <p>{props.error}</p>}
-//     </div>
-    // <div>
-    //     {props.forecast_city && <p>Location: {props.forecast_city}</p>}
-    //     {props.forecast_date && <p>Date: {props.forecast_date} </p>}
-    //     {props.forecast && <p>Temperature: {props.forecast} &#8457;</p>}
-    //     <p>{props.description}</p>
-    //     {props.error && <p>{props.error}</p>}
-    // </div>
-// ) 
 
 export default Weather;

@@ -1,10 +1,11 @@
 import React from 'react';
 
 const Titles = (props) => (
-    <div>
-        <h1 className="title-container__title">Weather Finder</h1>
-        <h3 className="title-container__subtitle">Find out temperature, conditions and more...</h3>
+    <div className="title__wrapper">
+        <h3>Weather Simplified</h3>
+        <h3>Brave the outdoors</h3>
 
+       
         {props.cityID && <p>Location: {props.cityID}</p>}
         {props.temperature && <p>Temperature: {props.temperature} &#8457;</p>}
         <p>{props.description}</p>
