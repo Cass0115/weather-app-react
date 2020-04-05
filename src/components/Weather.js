@@ -1,4 +1,6 @@
 import React from 'react';
+import { ReactComponent as clearSky }  from './images/clear-sky.svg';
+
 
 class Weather extends React.Component {
     render() {
@@ -13,8 +15,15 @@ class Weather extends React.Component {
                         {this.props.temperature && <p>{this.props.temperature} &#8457;</p>}
                     </div>
                     <div className="weather__icon">
-                        {/* <img src="">Icon of weather depending on said weather */}
+                        <clearSky />
+                        
+                        
                     </div>
+                    {/*  
+                    <div className="weather__icon">
+                        <img src="">Icon of weather depending on said weather 
+                    </div>
+                    */}
                     <div className="weather__extra-info">
                         <p>Low</p>
                         {this.props.minimum && <p> {this.props.minimum} &#8457;</p>}
@@ -25,7 +34,7 @@ class Weather extends React.Component {
                         <p>Humidity</p>
                         {this.props.humidity && <p>{this.props.humidity}%</p>}
                     </div>
-                    <p><b>------Break------</b></p>
+                    
 
                 </div>
 
@@ -49,7 +58,7 @@ class Weather extends React.Component {
                         <p>Humidity</p>
                         {this.props.humidity1 && <p>{this.props.humidity1}%</p>}
                     </div>
-                    <p><b>------Break------</b></p>
+                    
 
                 </div>
 
@@ -73,7 +82,7 @@ class Weather extends React.Component {
                         <p>Humidity</p>
                         {this.props.humidity2 && <p>{this.props.humidity2}%</p>}
                     </div>
-                    <p><b>------Break------</b></p>
+                    
 
                 </div>
 
@@ -97,7 +106,7 @@ class Weather extends React.Component {
                         <p>Humidity</p>
                         {this.props.humidity3 && <p>{this.props.humidity3}%</p>}
                     </div>
-                    <p><b>------Break------</b></p>
+                    
 
                 </div>
             </div>

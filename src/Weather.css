@@ -1,3 +1,9 @@
 .weather__wrapper {
     display: flex;
   }
+
+.weather__icon image {
+  width: 100px;
+  height: 100px;
+  background-color: #fff;
+}
