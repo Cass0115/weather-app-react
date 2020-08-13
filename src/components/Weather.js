@@ -1,5 +1,5 @@
 import React from 'react';
-import { ReactComponent as clearSky }  from './images/clear-sky.svg';
+import { ReactComponent as ClearSky }  from './images/clear-sky.svg';
 
 
 class Weather extends React.Component {
@@ -15,7 +15,7 @@ class Weather extends React.Component {
                         {this.props.temperature && <p>{this.props.temperature} &#8457;</p>}
                     </div>
                     <div className="weather__icon">
-                        <clearSky />
+                        <ClearSky />
                         
                         
                     </div>
