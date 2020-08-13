@@ -15,6 +15,7 @@ class Weather extends React.Component {
                         {this.props.temperature && <p>{this.props.temperature} &#8457;</p>}
                     </div>
                     <div className="weather__icon">
+                    
                         <ClearSky />
                         
                         
@@ -23,6 +24,11 @@ class Weather extends React.Component {
                     <div className="weather__icon">
                         <img src="">Icon of weather depending on said weather 
                     </div>
+                    if this.props.cloud = clouds 60%-100% (cloudy photo);
+                    if this.props.cloud = clouds 31%-59% (semi-cloudy photo);
+                    if this.props.cloud = clouds 0-30% (sunny photo);
+
+
                     */}
                     <div className="weather__extra-info">
                         <p>Low</p>
@@ -46,8 +52,11 @@ class Weather extends React.Component {
                         {this.props.temperature1 && <p>{this.props.temperature1} &#8457;</p>}
                     </div>
                     <div className="weather__icon">
+                        <ClearSky />
                         {/* <img src="">Icon of weather depending on said weather */}
                     </div>
+                    
+
                     <div className="weather__extra-info">
                         <p>Low</p>
                         {this.props.minimum1 && <p> {this.props.minimum1} &#8457;</p>}
@@ -70,6 +79,7 @@ class Weather extends React.Component {
                         {this.props.temperature2 && <p>{this.props.temperature2} &#8457;</p>}
                     </div>
                     <div className="weather__icon">
+                        <ClearSky />
                         {/* <img src="">Icon of weather depending on said weather */}
                     </div>
                     <div className="weather__extra-info">
@@ -94,6 +104,7 @@ class Weather extends React.Component {
                         {this.props.temperature3 && <p>{this.props.temperature3} &#8457;</p>}
                     </div>
                     <div className="weather__icon">
+                        <ClearSky />
                         {/* <img src="">Icon of weather depending on said weather */}
                     </div>
                     <div className="weather__extra-info">

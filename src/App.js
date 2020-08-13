@@ -38,7 +38,7 @@ componentDidMount() {
         // console.log(object.list[0].weather[0].main)
         // console.log(object.list[0].main.temp_min);
         // console.log(object.list[0].main.temp_max);
-        // console.log(object.list[0].clouds.all);
+        console.log(object.list[0].clouds.all);
 
         // console.log(object.list[1].name);
         // console.log(object.list[1].main.temp);

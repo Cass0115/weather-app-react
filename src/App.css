@@ -10,6 +10,18 @@ body {
   display: none;
 }
 
+.content__block {
+  padding: 2%;
+  margin: 0 auto;
+}
+.city__name {
+  font-size: 2vw;
+}
+
+.weather__icon:hover {
+  opacity: 0.8;
+}
+
 
 
 
