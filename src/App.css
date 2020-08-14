@@ -15,11 +15,16 @@ body {
   margin: 0 auto;
 }
 .city__name {
-  font-size: 2vw;
+  font-size: 3rem;
 }
-
+.weather__temp {
+  font-size: 2rem;
+}
 .weather__icon:hover {
   opacity: 0.8;
+}
+.weather__extra-info p {
+  font-size: 1.5rem
 }
 
 

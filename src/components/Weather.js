@@ -31,14 +31,22 @@ class Weather extends React.Component {
 
                     */}
                     <div className="weather__extra-info">
-                        <p>Low</p>
-                        {this.props.minimum && <p> {this.props.minimum} &#8457;</p>}
-                        <p>High</p>
-                        {this.props.maximum && <p> {this.props.maximum} &#8457;</p>}
-                        <p>Cloud coverage</p>
-                        {this.props.cloud && <p>{this.props.cloud}%</p>}
-                        <p>Humidity</p>
-                        {this.props.humidity && <p>{this.props.humidity}%</p>}
+                        <p>
+                            <span>Low</span>
+                            {this.props.minimum && <span> {this.props.minimum} &#8457;</span>}
+                        </p>
+                        <p>
+                            <span>High</span>
+                            {this.props.maximum && <span> {this.props.maximum} &#8457;</span>}
+                        </p>
+                        <p>
+                            <span>Cloud coverage</span>
+                            {this.props.cloud && <span>{this.props.cloud}%</span>}
+                        </p>
+                        <p>
+                            <span>Humidity</span>
+                            {this.props.humidity && <span>{this.props.humidity}%</span>}
+                        </p>
                     </div>
                     
 
@@ -58,14 +66,22 @@ class Weather extends React.Component {
                     
 
                     <div className="weather__extra-info">
-                        <p>Low</p>
-                        {this.props.minimum1 && <p> {this.props.minimum1} &#8457;</p>}
-                        <p>High</p>
-                        {this.props.maximum1 && <p> {this.props.maximum1} &#8457;</p>}
-                        <p>Cloud coverage</p>
-                        {this.props.cloud1 && <p>{this.props.cloud1}%</p>}
-                        <p>Humidity</p>
-                        {this.props.humidity1 && <p>{this.props.humidity1}%</p>}
+                        <p>
+                            <span>Low</span>
+                            {this.props.minimum1 && <span> {this.props.minimum1} &#8457;</span>}
+                        </p>
+                        <p>
+                            <span>High</span>
+                            {this.props.maximum1 && <span> {this.props.maximum1} &#8457;</span>}
+                        </p>
+                        <p>
+                            <span>Cloud coverage</span>
+                            {this.props.cloud1 && <span>{this.props.cloud1}%</span>}
+                        </p>
+                        <p>
+                            <span>Humidity</span>
+                            {this.props.humidity1 && <span>{this.props.humidity1}%</span>}
+                        </p>
                     </div>
                     
 
@@ -82,15 +98,24 @@ class Weather extends React.Component {
                         <ClearSky />
                         {/* <img src="">Icon of weather depending on said weather */}
                     </div>
+                    
                     <div className="weather__extra-info">
-                        <p>Low</p>
-                        {this.props.minimum2 && <p> {this.props.minimum2} &#8457;</p>}
-                        <p>High</p>
-                        {this.props.maximum2 && <p> {this.props.maximum2} &#8457;</p>}
-                        <p>Cloud coverage</p>
-                        {this.props.cloud2 && <p>{this.props.cloud2}%</p>}
-                        <p>Humidity</p>
-                        {this.props.humidity2 && <p>{this.props.humidity2}%</p>}
+                        <p>
+                            <span>Low</span>
+                            {this.props.minimum2 && <span> {this.props.minimum2} &#8457;</span>}
+                        </p>
+                        <p>
+                            <span>High</span>
+                            {this.props.maximum2 && <span> {this.props.maximum2} &#8457;</span>}
+                        </p>
+                        <p>
+                            <span>Cloud coverage</span>
+                            {this.props.cloud2 && <span>{this.props.cloud2}%</span>}
+                        </p>
+                        <p>
+                            <span>Humidity</span>
+                            {this.props.humidity2 && <span>{this.props.humidity2}%</span>}
+                        </p>
                     </div>
                     
 
@@ -107,15 +132,24 @@ class Weather extends React.Component {
                         <ClearSky />
                         {/* <img src="">Icon of weather depending on said weather */}
                     </div>
+                    
                     <div className="weather__extra-info">
-                        <p>Low</p>
-                        {this.props.minimum3 && <p> {this.props.minimum3} &#8457;</p>}
-                        <p>High</p>
-                        {this.props.maximum3 && <p> {this.props.maximum3} &#8457;</p>}
-                        <p>Cloud coverage</p>
-                        {this.props.cloud3 && <p>{this.props.cloud3}%</p>}
-                        <p>Humidity</p>
-                        {this.props.humidity3 && <p>{this.props.humidity3}%</p>}
+                        <p>
+                            <span>Low</span>
+                            {this.props.minimum3 && <span> {this.props.minimum3} &#8457;</span>}
+                        </p>
+                        <p>
+                            <span>High</span>
+                            {this.props.maximum3 && <span> {this.props.maximum3} &#8457;</span>}
+                        </p>
+                        <p>
+                            <span>Cloud coverage</span>
+                            {this.props.cloud3 && <span>{this.props.cloud3}%</span>}
+                        </p>
+                        <p>
+                            <span>Humidity</span>
+                            {this.props.humidity3 && <span>{this.props.humidity3}%</span>}
+                        </p>
                     </div>
                     
 
