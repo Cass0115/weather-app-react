@@ -43,16 +43,6 @@ componentDidMount() {
         console.log(object.list[2].clouds.all);
         console.log(object.list[3].clouds.all);
 
-        // console.log(object.list[1].name);
-        // console.log(object.list[1].main.temp);
-        
-
-        // console.log(object.list[2].name);
-        // console.log(object.list[2].main.temp);
-
-        // console.log(object.list[3].name);
-        // console.log(object.list[3].main.temp);
-
         if(object) {
           return this.setState({
             isLoaded: true,
