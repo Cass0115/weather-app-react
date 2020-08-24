@@ -53,6 +53,8 @@ componentDidMount() {
             maximum: Math.round(object.list[0].main.temp_max),
             cloud: object.list[0].clouds.all,
             humidity: object.list[0].main.humidity,
+            
+            
 
             temperature1: Math.round(object.list[1].main.temp),
             description1: object.list[1].weather[0].main,
@@ -199,19 +201,19 @@ componentDidMount() {
 //   toggleWeather.classList.add('remove');
 // };
 
-class AddingClass extends React.Component {
-  handleClick() {
-    var toggleWeather = document.querySelector('.weather');
-    toggleWeather.classList.add('remove');
-    console.log('this is:', this);
-  }
-  render() {
-    return (
-      <button onClick={() => this.handleClick()}>
-      Click Me
-      </button>
-    )
-  }
-}
+// class AddingClass extends React.Component {
+//   handleClick() {
+//     var toggleWeather = document.querySelector('.weather');
+//     toggleWeather.classList.add('remove');
+//     console.log('this is:', this);
+//   }
+//   render() {
+//     return (
+//       <button onClick={() => this.handleClick()}>
+//       Click Me
+//       </button>
+//     )
+//   }
+// }
 
 export default App;

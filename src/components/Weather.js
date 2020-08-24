@@ -1,11 +1,11 @@
 import React from 'react';
 
-import { ReactComponent as BrokenCloudsWhite }  from './images/BrokenCloudsSelected.svg';
-import { ReactComponent as FewCloudsWhite }  from './images/FewCloudsSelected.svg';
-import { ReactComponent as RainSelectedWhite }  from './images/RainSelected.svg';
-import { ReactComponent as ScatteredCloudsSelectedWhite }  from './images/ScatteredCloudsSelected.svg';
-import { ReactComponent as ShowerRainSelectedWhite }  from './images/ShowerRainSelected.svg';
-import { ReactComponent as ThunderstormsSelectedWhite }  from './images/ThunderstormsSelected.svg';
+// import { ReactComponent as BrokenCloudsWhite }  from './images/BrokenCloudsWhite.svg';
+import { ReactComponent as FewCloudsWhite }  from './images/FewCloudsWhite.svg';
+// import { ReactComponent as RainWhite }  from './images/RainWhite.svg';
+// import { ReactComponent as ScatteredCloudsWhite }  from './images/ScatteredCloudsWhite.svg';
+// import { ReactComponent as ShowerRainWhite }  from './images/ShowerRainWhite.svg';
+// import { ReactComponent as ThunderstormsWhite }  from './images/ThunderstormsWhite.svg';
 
 
 
@@ -19,8 +19,37 @@ import { ReactComponent as SnowBlack }  from './images/SnowBlack.svg';
 import { ReactComponent as ThunderStormsBlack }  from './images/ThunderStormsBlack.svg';
 
 
+
 class Weather extends React.Component {
     render() {
+        const isClearSky = this.props.cloud;
+        const isClearSky1 = this.props.cloud1;
+        const isClearSky2 = this.props.cloud2;
+        const isClearSky3 = this.props.cloud3;
+        
+        // function getIcon(isClearSky){
+        //     if(isClearSky <= 0 && isClearSky >= 30) {
+        //         return `
+        //             <div className="weather__icon">
+        //                 <ClearSkyBlack />
+        //             </div>
+        //         `;
+        //     } else if(isClearSky <= 31 && isClearSky >= 59) {
+        //         return  `
+        //             <div className="weather__icon">
+        //                 <FewCloudsBlack />
+        //             </div>
+        //         `;
+        //     } else (isClearSky <= 60 && isClearSky >= 100) {
+        //         return `
+        //             <div className="weather__icon">
+        //                 <ScatteredCloudsBlack />
+        //             </div>
+        //         `;
+        //     }
+        // }
+        
+        
         return (
             <div className="weather__wrapper weather">
 
@@ -32,10 +61,20 @@ class Weather extends React.Component {
                         {this.props.temperature && <p> {this.props.temperature} &#8457;</p>}
                     </div>
                     <div className="weather__icon">
-                
-                        <BrokenCloudsBlack /> 
-                        
+                           {/* {getIcon(isClearSky)} */}
+                           {isClearSky < 0 && isClearSky > 30
+                                ? <ClearSkyBlack />
+                                : <ThunderStormsBlack />  ||
+                            isClearSky < 31 && isClearSky > 59
+                                ? <FewCloudsBlack />
+                                : <ThunderStormsBlack /> ||
+                            isClearSky < 60 && isClearSky > 100
+                                ? <BrokenCloudsBlack />
+                                : <ThunderStormsBlack />
+                            }
+                            
                     </div>
+                    
                     {/*  
                     <div className="weather__icon">
                         <img src="">Icon of weather depending on said weather 
@@ -76,8 +115,16 @@ class Weather extends React.Component {
                         {this.props.temperature1 && <p> {this.props.temperature1} &#8457;</p>}
                     </div>
                     <div className="weather__icon">
-                        <ClearSkyBlack />
-                        {/* <img src="">Icon of weather depending on said weather */}
+                        {isClearSky1 < 0 && isClearSky1 > 30
+                            ? <ClearSkyBlack />
+                            : <BrokenCloudsBlack />  ||
+                        isClearSky1 < 31 && isClearSky1 > 59
+                            ? <FewCloudsBlack />
+                            : <ScatteredCloudsBlack />  ||
+                        isClearSky1 < 60 && isClearSky1 > 100
+                            ? <BrokenCloudsBlack />
+                            : <ClearSkyBlack />
+                        }
                     </div>
                     
 
