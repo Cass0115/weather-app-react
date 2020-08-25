@@ -35,14 +35,6 @@ componentDidMount() {
       .then((object) => { 
         console.log(object.list);
 
-        // console.log(object.list[0].weather[0].main)
-        // console.log(object.list[0].main.temp_min);
-        // console.log(object.list[0].main.temp_max);
-        console.log(object.list[0].clouds.all);
-        console.log(object.list[1].clouds.all);
-        console.log(object.list[2].clouds.all);
-        console.log(object.list[3].clouds.all);
-
         if(object) {
           return this.setState({
             isLoaded: true,

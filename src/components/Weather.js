@@ -26,29 +26,10 @@ class Weather extends React.Component {
         const isClearSky1 = this.props.cloud1;
         const isClearSky2 = this.props.cloud2;
         const isClearSky3 = this.props.cloud3;
-        
-        // function getIcon(isClearSky){
-        //     if(isClearSky <= 0 && isClearSky >= 30) {
-        //         return `
-        //             <div className="weather__icon">
-        //                 <ClearSkyBlack />
-        //             </div>
-        //         `;
-        //     } else if(isClearSky <= 31 && isClearSky >= 59) {
-        //         return  `
-        //             <div className="weather__icon">
-        //                 <FewCloudsBlack />
-        //             </div>
-        //         `;
-        //     } else (isClearSky <= 60 && isClearSky >= 100) {
-        //         return `
-        //             <div className="weather__icon">
-        //                 <ScatteredCloudsBlack />
-        //             </div>
-        //         `;
-        //     }
-        // }
-        
+        console.log(isClearSky);
+        console.log(isClearSky1);
+        console.log(isClearSky2);
+        console.log(isClearSky3);
         
         return (
             <div className="weather__wrapper weather">
@@ -61,17 +42,26 @@ class Weather extends React.Component {
                         {this.props.temperature && <p> {this.props.temperature} &#8457;</p>}
                     </div>
                     <div className="weather__icon">
-                           {/* {getIcon(isClearSky)} */}
-                           {isClearSky < 0 && isClearSky > 30
-                                ? <ClearSkyBlack />
-                                : <ThunderStormsBlack />  ||
-                            isClearSky < 31 && isClearSky > 59
-                                ? <FewCloudsBlack />
-                                : <ThunderStormsBlack /> ||
-                            isClearSky < 60 && isClearSky > 100
-                                ? <BrokenCloudsBlack />
-                                : <ThunderStormsBlack />
+                    {(() => {
+                        if(isClearSky > 0 && isClearSky < 30){
+                            return (
+                                <div><ClearSkyBlack /></div>
+                            ) 
+                            } else if(isClearSky > 31 && isClearSky < 59){
+                                return(
+                                    <div><FewCloudsBlack /></div>
+                                )
+                            } else if(isClearSky > 60 && isClearSky < 100){
+                                return(
+                                    <div><BrokenCloudsBlack /></div>
+                                )
+                            } else {
+                                return (
+                                    <div><ThunderStormsBlack /></div>
+                                )
                             }
+                        
+                    })()}
                             
                     </div>
                     
@@ -115,16 +105,26 @@ class Weather extends React.Component {
                         {this.props.temperature1 && <p> {this.props.temperature1} &#8457;</p>}
                     </div>
                     <div className="weather__icon">
-                        {isClearSky1 < 0 && isClearSky1 > 30
-                            ? <ClearSkyBlack />
-                            : <BrokenCloudsBlack />  ||
-                        isClearSky1 < 31 && isClearSky1 > 59
-                            ? <FewCloudsBlack />
-                            : <ScatteredCloudsBlack />  ||
-                        isClearSky1 < 60 && isClearSky1 > 100
-                            ? <BrokenCloudsBlack />
-                            : <ClearSkyBlack />
-                        }
+                    {(() => {
+                        if(isClearSky1 > 0 && isClearSky1 < 30){
+                            return (
+                                <div><ClearSkyBlack /></div>
+                            ) 
+                            } else if(isClearSky1 > 31 && isClearSky1 < 59){
+                                return(
+                                    <div><FewCloudsBlack /></div>
+                                )
+                            } else if(isClearSky1 > 60 && isClearSky1 < 100){
+                                return(
+                                    <div><BrokenCloudsBlack /></div>
+                                )
+                            } else {
+                                return (
+                                    <div><ThunderStormsBlack /></div>
+                                )
+                            }
+                        
+                    })()}
                     </div>
                     
 
@@ -158,8 +158,27 @@ class Weather extends React.Component {
                         {this.props.temperature2 && <p> {this.props.temperature2} &#8457;</p>}
                     </div>
                     <div className="weather__icon">
-                        <FewCloudsBlack />
-                        {/* <img src="">Icon of weather depending on said weather */}
+                        {(() => {
+                        if(isClearSky2 > 0 && isClearSky2 < 30){
+                            return (
+                                <div><ClearSkyBlack /></div>
+                            ) 
+                            } else if(isClearSky2 > 31 && isClearSky2 < 59){
+                                return(
+                                    <div><FewCloudsBlack /></div>
+                                )
+                            } else if(isClearSky2 > 60 && isClearSky2 < 100){
+                                return(
+                                    <div><BrokenCloudsBlack /></div>
+                                )
+                            } else {
+                                return (
+                                    <div><ThunderStormsBlack /></div>
+                                )
+                            }
+                        
+                    })()}
+                        
                     </div>
                     
                     <div className="weather__extra-info">
@@ -192,8 +211,26 @@ class Weather extends React.Component {
                         {this.props.temperature3 && <p> {this.props.temperature3} &#8457;</p>}
                     </div>
                     <div className="weather__icon">
-                        <ScatteredCloudsBlack />
-                        {/* <img src="">Icon of weather depending on said weather */}
+                        {(() => {
+                        if(isClearSky3 > 0 && isClearSky3 < 30){
+                            return (
+                                <div><ClearSkyBlack /></div>
+                            ) 
+                            } else if(isClearSky3 > 31 && isClearSky3 < 59){
+                                return(
+                                    <div><FewCloudsBlack /></div>
+                                )
+                            } else if(isClearSky3 > 60 && isClearSky3 < 100){
+                                return(
+                                    <div><BrokenCloudsBlack /></div>
+                                )
+                            } else {
+                                return (
+                                    <div><ThunderStormsBlack /></div>
+                                )
+                            }
+                        
+                    })()}
                     </div>
                     
                     <div className="weather__extra-info">
