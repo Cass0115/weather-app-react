@@ -57,7 +57,7 @@ class Weather extends React.Component {
                                 )
                             } else {
                                 return (
-                                    <div><ThunderStormsBlack /></div>
+                                    null
                                 )
                             }
                         
@@ -65,16 +65,6 @@ class Weather extends React.Component {
                             
                     </div>
                     
-                    {/*  
-                    <div className="weather__icon">
-                        <img src="">Icon of weather depending on said weather 
-                    </div>
-                    if this.props.cloud = clouds 60-100 (cloudy photo);
-                    if this.props.cloud = clouds 31-59 (semi-cloudy photo);
-                    if this.props.cloud = clouds 0-30 (sunny photo);
-
-
-                    */}
                     <div className="weather__extra-info">
                         <p>
                             <span>Low</span>
