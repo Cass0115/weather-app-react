@@ -1,0 +1,31 @@
+{
+  "files": {
+    "main.css": "/weather-app-react/static/css/main.34d520f5.chunk.css",
+    "main.js": "/weather-app-react/static/js/main.08dadd5b.chunk.js",
+    "main.js.map": "/weather-app-react/static/js/main.08dadd5b.chunk.js.map",
+    "runtime-main.js": "/weather-app-react/static/js/runtime-main.0d456eba.js",
+    "runtime-main.js.map": "/weather-app-react/static/js/runtime-main.0d456eba.js.map",
+    "static/js/2.19411de6.chunk.js": "/weather-app-react/static/js/2.19411de6.chunk.js",
+    "static/js/2.19411de6.chunk.js.map": "/weather-app-react/static/js/2.19411de6.chunk.js.map",
+    "index.html": "/weather-app-react/index.html",
+    "precache-manifest.e96b59cfd08e1d8532f37f260cbea17e.js": "/weather-app-react/precache-manifest.e96b59cfd08e1d8532f37f260cbea17e.js",
+    "service-worker.js": "/weather-app-react/service-worker.js",
+    "static/css/main.34d520f5.chunk.css.map": "/weather-app-react/static/css/main.34d520f5.chunk.css.map",
+    "static/js/2.19411de6.chunk.js.LICENSE.txt": "/weather-app-react/static/js/2.19411de6.chunk.js.LICENSE.txt",
+    "static/media/BrokenCloudsBlack.17d58e54.svg": "/weather-app-react/static/media/BrokenCloudsBlack.17d58e54.svg",
+    "static/media/FewCloudsBlack.63c660f1.svg": "/weather-app-react/static/media/FewCloudsBlack.63c660f1.svg",
+    "static/media/FewCloudsWhite.38d3ec05.svg": "/weather-app-react/static/media/FewCloudsWhite.38d3ec05.svg",
+    "static/media/RainBlack.5762f068.svg": "/weather-app-react/static/media/RainBlack.5762f068.svg",
+    "static/media/ScatteredCloudsBlack.5ff3119d.svg": "/weather-app-react/static/media/ScatteredCloudsBlack.5ff3119d.svg",
+    "static/media/ShowerRainBlack.cf115b8e.svg": "/weather-app-react/static/media/ShowerRainBlack.cf115b8e.svg",
+    "static/media/SnowBlack.330af40e.svg": "/weather-app-react/static/media/SnowBlack.330af40e.svg",
+    "static/media/ThunderStormsBlack.974b92ba.svg": "/weather-app-react/static/media/ThunderStormsBlack.974b92ba.svg",
+    "static/media/clear-sky.e5abfbc1.svg": "/weather-app-react/static/media/clear-sky.e5abfbc1.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.0d456eba.js",
+    "static/js/2.19411de6.chunk.js",
+    "static/css/main.34d520f5.chunk.css",
+    "static/js/main.08dadd5b.chunk.js"
+  ]
+}
