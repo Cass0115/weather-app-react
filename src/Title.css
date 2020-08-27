@@ -1,0 +1,8 @@
+.title__wrapper {
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 2.5vw;
+}
+/* .title__wrapper-inner {
+    display: inline;
+} */

@@ -2,8 +2,13 @@ import React from 'react';
 
 const Titles = (props) => (
     <div className="title__wrapper">
-        <h3>Weather Simplified</h3>
-        <h3>Brave the outdoors</h3>
+        
+            <h3>Weather Simplified</h3>
+            <hr className="trans--grow hr" />
+        
+            <h3>Brave the outdoors</h3>
+            <hr className="trans--grow hr" />
+    
 
        
         {props.cityID && <p>Location: {props.cityID}</p>}
