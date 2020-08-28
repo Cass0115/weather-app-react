@@ -14,7 +14,7 @@
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -b master -d build",
-    "start": "react-scripts start",
+    "start": "react-scripts start && cp build/index.js src/index.js",
     "build": "react-scripts build"
   },
   "eslintConfig": {
@@ -31,8 +31,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "devDependencies": {
-    "gh-pages": "^2.0.1"
   }
 }
